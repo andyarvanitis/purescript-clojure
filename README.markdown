@@ -17,7 +17,7 @@ A small strongly typed programming language with expressive types that compiles 
   * [purescript-eff](https://github.com/andyarvanitis/purescript-eff/tree/clojure)
   * [purescript-console](https://github.com/andyarvanitis/purescript-console/tree/clojure)
 
-* Note that you must use branch `clojure` for each of these. Also note that they are based on the ongoing 0.8.x module overhaul, so some tests won't work. Any modules that do not require FFI can also be used (or at least tried).
+    Note that you must use branch `clojure` for each of these. Also note that they are based on the ongoing 0.8.x module overhaul, so some tests won't work. Any modules that do not require FFI can also be used (or at least tried).
 
 #### Basic instructions
 * Build purescript in the usual way, but using code from this repo
