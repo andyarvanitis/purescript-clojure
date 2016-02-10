@@ -22,6 +22,6 @@ A small strongly typed programming language with expressive types that compiles 
 #### Basic instructions
 * Build purescript in the usual way, but using code from this repo
 * Install [Leiningen](http://leiningen.org/)
-* Build your PureScript source whatever way you typically do so, making sure to use the versions of the standard modules mentioned above
+* Build your PureScript source however you typically do, but use `plc` instead of `psc`, and make sure to use the versions of the standard modules mentioned above
 * `cd` to your `output` directory
 * Execute `lein run` to run your program, `lein repl`, or `lein uberjar` to AOT compile, etc. (normal Clojure stuff)
