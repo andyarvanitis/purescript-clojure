@@ -2,7 +2,7 @@
 
 A small strongly typed programming language with expressive types that compiles to Javascript, written in and inspired by Haskell.
 
-## An experimental Clojure backend for PureScript
+## An experimental [Clojure](http://clojure.org/) backend for PureScript
 
 #### Status
 * This is a quick, first-pass effort, so not much work has gone into it
@@ -11,9 +11,13 @@ A small strongly typed programming language with expressive types that compiles 
 #### Requirements
 
 * Everything you need to build [PureScript](https://github.com/purescript/purescript)
-* [Clojure](http://clojure.org/) via [Leiningen](http://leiningen.org/)
-* Versions of the PureScript standard modules. Currently (all found in repo [https://github.com/andyarvanitis](https://github.com/andyarvanitis?tab=repositories)) [purescript-prelude](https://github.com/andyarvanitis/purescript-prelude/tree/clojure), [purescript-eff](https://github.com/andyarvanitis/purescript-eff/tree/clojure), and [purescript-console](https://github.com/andyarvanitis/purescript-console/tree/clojure) have been ported. Note that you must use branch `clojure` for each of these. Also note that they are based on the ongoing 0.8.x module overhaul, so some tests won't work.
-* Any modules that do not require FFI can also be used.
+* Clojure via [Leiningen](http://leiningen.org/)
+* Versions of the PureScript standard modules. Currently, the following modules have been ported (all found in repo [https://github.com/andyarvanitis](https://github.com/andyarvanitis?tab=repositories)):
+  * [purescript-prelude](https://github.com/andyarvanitis/purescript-prelude/tree/clojure)
+  * [purescript-eff](https://github.com/andyarvanitis/purescript-eff/tree/clojure)
+  * [purescript-console](https://github.com/andyarvanitis/purescript-console/tree/clojure)
+
+* Note that you must use branch `clojure` for each of these. Also note that they are based on the ongoing 0.8.x module overhaul, so some tests won't work. Any modules that do not require FFI can also be used (or at least tried).
 
 #### Basic instructions
 * Build purescript in the usual way, but using code from this repo
