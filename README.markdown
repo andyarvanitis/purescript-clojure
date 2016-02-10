@@ -13,11 +13,11 @@ A small strongly typed programming language with expressive types that compiles 
 * Everything you need to build [PureScript](https://github.com/purescript/purescript)
 * Clojure via [Leiningen](http://leiningen.org/)
 * Versions of the PureScript standard modules. Currently, the following modules have been ported, all found in repo [https://github.com/andyarvanitis](https://github.com/andyarvanitis?tab=repositories):
-  * purescript-prelude
-  * purescript-eff
-  * purescript-console
+ * purescript-prelude
+ * purescript-eff
+ * purescript-console
 
-    Note that you **must use branch `clojure`** for each of these. Also note that they are based on the ongoing 0.8.x module overhaul, so some tests won't work. Any modules that do not require FFI can also be used (or at least tried).
+Note that you **must use branch `clojure`** for each of these. Also note that they are based on the ongoing 0.8.x module overhaul, so some tests won't work. Any modules that do not require FFI can also be used (or at least tried).
 
 #### Basic instructions
 * Build purescript in the usual way, but using code from this repo
