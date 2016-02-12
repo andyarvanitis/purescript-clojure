@@ -165,7 +165,7 @@ projectTxt :: String
 projectTxt = intercalate "\n" lines'
   where lines' = [ "(defproject main \"0.1.0-SNAPSHOT\""
                  , "  :description \"PureScript output\""
-                 , "  :dependencies [[org.clojure/clojure \"1.7.0\"]]"
+                 , "  :dependencies [[org.clojure/clojure \"1.8.0\"]]"
                  , "  :main ^:skip-aot Main.core"
                  , "  :target-path \"target/%s\""
                  , "  :profiles {:uberjar {:aot :all}})"
