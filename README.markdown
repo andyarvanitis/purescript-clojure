@@ -20,8 +20,8 @@ A small strongly typed programming language with expressive types that compiles 
   Note that you **must use branch `clojure`** for each of these. Also note that they are based on the ongoing 0.8.x module overhaul, so some tests won't work. Any modules that do not require FFI can also be used (or at least tried).
 
 #### Basic instructions
-* Build purescript in the usual way, but using code from this repo
+* Build purescript itself in the usual way, but using code from this repo
 * Install [Leiningen](http://leiningen.org/)
-* Build your PureScript source whatever way you typically do so, making sure to use the versions of the standard modules mentioned above
+* Build your PureScript program source however you typically do, but use `plc` instead of `psc`, and make sure to use the versions of the standard modules mentioned above
 * `cd` to your `output` directory
 * Execute `lein run` to run your program, `lein repl`, or `lein uberjar` to AOT compile, etc. (normal Clojure stuff)
