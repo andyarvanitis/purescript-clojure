@@ -46,6 +46,10 @@ data BinaryOperator
   --
   = Add
   -- |
+  -- String concatenation
+  --
+  | StringAppend
+  -- |
   -- Numeric subtraction
   --
   | Subtract
