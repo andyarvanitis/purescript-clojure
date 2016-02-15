@@ -327,6 +327,7 @@ prettyPrintLisp' = A.runKleisli $ runPattern matchValue
                     , binary    Divide               "/"
                     , binary    Modulus              "%" ]
                   , [ binary    Add                  "+"
+                    , binary    StringAppend         "str"
                     , binary    Subtract             "-" ]
                   , [ binary    ShiftLeft            "<<"
                     , binary    ShiftRight           ">>"
