@@ -220,13 +220,15 @@ moduleToLisp env (Module coms mn imps exps foreigns decls) foreign_ =
     varval :: Lisp -> [Lisp]
     varval (LispVariableIntroduction var' (Just val')) = [LispVar var', val']
     varval _ = []
+  valueToLisp (Constructor _ _ (ProperName ctor) []) =
+    return $ LispFunction Nothing [] (LispReturn $ LispObjectLiteral ([("constructor", LispVar (safeName (':':ctor)))]))
   valueToLisp (Constructor _ _ (ProperName ctor) fields) =
-    return $ LispFunction Nothing
-                          (fields')
-                          (LispReturn $ LispObjectLiteral (("constructor", LispVar (safeName (':':ctor))) :
-                                                           zip fields' (LispVar <$> fields')))
+    return $ lispCurry fields'
+                       (LispReturn $ LispObjectLiteral (("constructor", LispVar (safeName (':':ctor))) :
+                                                        zip (runIdent <$> fields) (LispVar <$> fields')))
     where
     fields' = identToLisp <$> fields
+    lispCurry args r = foldl (\expr arg -> LispFunction Nothing [arg] expr) r args
   literalToValueLisp :: Literal (Expr Ann) -> m Lisp
   literalToValueLisp (NumericLiteral (Left i)) = return $ LispNumericLiteral (Left i)
   literalToValueLisp (NumericLiteral (Right n)) = return $ LispNumericLiteral (Right n)
